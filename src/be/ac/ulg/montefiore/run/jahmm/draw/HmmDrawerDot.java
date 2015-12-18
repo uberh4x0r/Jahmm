@@ -78,8 +78,8 @@ class HmmDrawerDot<H extends Hmm<?>>
 		for (int i = 0; i < hmm.nbStates(); i++)
 			for (int j = 0; j < hmm.nbStates(); j++)
 				if (hmm.getAij(i, j) >= minimumAij)
-					s += "\t" + i + " -> " + j + " [label=" + 
-					probabilityFormat.format(hmm.getAij(i, j)) + "];\n";
+					s += "\t" + i + " -> " + j + " [label=\"" +
+					probabilityFormat.format(hmm.getAij(i, j)) + "\"];\n";
 		
 		return s;
 	}
